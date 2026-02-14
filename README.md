@@ -1,6 +1,6 @@
 <div align="center">
 
-# EXSPECSO
+# Exspecso
 
 <img src="assets/exspecso-logo.svg" alt="Exspecso logo" width="220" />
 
