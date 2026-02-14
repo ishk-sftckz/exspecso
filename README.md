@@ -9,9 +9,6 @@
 </div>
 
 Exspecso is a spec-driven framework that keeps delivery simple without losing context.
-The first release will focus on three stages: ideation, planning, and execution.
-
-## Status
 
 - Work in progress on the first release.
 - Defining the ideation workflow.
