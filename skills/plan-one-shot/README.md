@@ -13,8 +13,4 @@
 
 - features that need clear implementation plans
 - multi-step refactors where scope control matters
-- teams that want predictable plan review before coding
-
-## Location
-
-This skill definition is stored at `skills/plan-one-shot/SKILL.md`.
+- everyone who wants predictable plan review before coding
