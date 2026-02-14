@@ -1,27 +1,33 @@
-# exspecso
+<div align="center">
 
-Open source Agent Skills by [@ishk-sftckz](https://github.com/ishk-sftckz).
+# EXSPECSO
 
-## Install
+<img src="assets/exspecso-logo.svg" alt="Exspecso logo: coffee cup with agentic circuit elements" width="180" />
+
+**Spec engineering framework built for balance.**
+
+Works for complex systems and simple flows, with a practical planning-first approach.
+
+</div>
+
+## What Is Exspecso?
+
+Exspecso is a spec engineering framework focused on:
+
+- clear planning before execution
+- balanced structure without enterprise overhead
+- reliable workflows for both small and large scopes
+
+## Status
+
+Exspecso is still in progress. The repository is actively evolving.
+
+## Skills
+
+Skills live in `skills/`.
+
+Install this repo as a skills source:
 
 ```bash
 npx skills add ishk-sftckz/exspecso
 ```
-
-## Available Skills
-
-- `plan-one-shot`: Antigravity-style planning workflow with strict review gates and explicit execution trigger.
-
-## Repository Layout
-
-```text
-exspecso/
-  skills/
-    plan-one-shot/
-      SKILL.md
-```
-
-## Notes
-
-- Skills are auto-discovered from the `skills/` directory.
-- This repo follows the same public-skill pattern used by repositories like `anthropics/skills`.
