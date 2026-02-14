@@ -1,6 +1,6 @@
 # plan-one-shot
 
-`plan-one-shot` is an Exspecso skill for disciplined, Antigravity-style planning and execution.
+`plan-one-shot` is Antigravity-style planning and execution.
 
 ## What It Enforces
 

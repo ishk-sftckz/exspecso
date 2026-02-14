@@ -2,32 +2,18 @@
 
 # EXSPECSO
 
-<img src="assets/exspecso-logo.svg" alt="Exspecso logo: coffee cup with agentic circuit elements" width="180" />
+<img src="assets/exspecso-logo.svg" alt="Exspecso logo" width="220" />
 
-**Spec engineering framework built for balance.**
-
-Works for complex systems and simple flows, with a practical planning-first approach.
+**Spec-driven framework for balanced software delivery.**
 
 </div>
 
-## What Is Exspecso?
-
-Exspecso is a spec engineering framework focused on:
-
-- clear planning before execution
-- balanced structure without enterprise overhead
-- reliable workflows for both small and large scopes
+Exspecso is a spec-driven framework that keeps delivery simple without losing context.
+The first release will focus on three stages: ideation, planning, and execution.
 
 ## Status
 
-Exspecso is still in progress. The repository is actively evolving.
-
-## Skills
-
-Skills live in `skills/`.
-
-Install this repo as a skills source:
-
-```bash
-npx skills add ishk-sftckz/exspecso
-```
+- Work in progress on the first release.
+- Defining the ideation workflow.
+- Defining the planning workflow.
+- Defining the execution workflow.
