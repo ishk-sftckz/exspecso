@@ -39,21 +39,6 @@ Where artifacts go:
 - `.exspecso/YYYY-MM-DD-<plan-name>/implementation_plan.md`
 - `.exspecso/YYYY-MM-DD-<plan-name>/walkthrough.md`
 
-Example prompt:
-
-```text
-Use plan-one-shot.
-
-Goal: Add CSV export to the users table.
-Constraints: keep current architecture; no new dependencies.
-```
-
-Approve + start execution:
-
-```text
-Execute Plan
-```
-
 ## Best For
 
 - features that need clear implementation plans
