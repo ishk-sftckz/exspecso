@@ -29,7 +29,7 @@ npx skills add ishk-sftckz/exspecso -y -a '*' --skill plan-one-shot
 
 ## How to use
 
-1. Ask your agent to create a plan for your task (do not ask it to start coding yet).
+1. Ask your agent to create a plan for your task(do not ask it to start coding yet, mention plan one shot skill in your prompt).
 2. Review the plan artifacts it generates.
 3. When you approve the plan, reply with exactly: `Execute Plan`.
 
