@@ -20,6 +20,8 @@ Replicate Antigravity plan-mode behavior using three artifacts and strict review
 6. After approval: execute strictly in `task.md` order and update statuses continuously.
 7. For existing projects, preserve architecture, naming, folder layout, and dependency choices unless the user asks for a change.
 8. Prefer minimal diff; do not introduce new abstractions/libraries unless justified by at least two concrete reuse points or a clear blocker.
+9. First call in a new conversation defaults to new planning. Do not infer an active plan from `.exspecso/` history.
+10. Only resume prior plan artifacts when the user explicitly asks to continue/resume an existing plan.
 
 ## Output Control Rules
 
@@ -61,9 +63,26 @@ All artifacts for one plan must live under a single date-prefixed folder:
 6. Max length 36.
 7. Collapse repeated `-` and trim edges.
 
+## Conversation Session Gate
+
+Treat plan state as conversation-scoped first, filesystem-scoped second.
+
+1. At the first skill invocation in a conversation, assume there is no active plan session.
+2. Default decision on first invocation:
+   - `Decision: Create New Plan`
+   - Reason: no active plan in this conversation.
+3. Do not scan `.exspecso/` to auto-select or continue an older plan on first invocation.
+4. Continue an existing plan only when the user explicitly requests it (for example: "continue existing plan", "resume plan", "continue implementing the plan") and provides a clear reference.
+5. Valid reference examples:
+   - folder name like `2026-02-16-my-plan`
+   - direct path like `.exspecso/2026-02-16-my-plan/implementation_plan.md`
+   - explicit plan title that uniquely maps to one folder
+6. If the user asks to continue but the reference is missing or ambiguous, ask one targeted clarification for the exact plan folder/path before proceeding.
+7. Once a plan is created or resumed in the current conversation, treat it as the active plan session and apply the replan gate for subsequent requests.
+
 ## Replan Decision Gate
 
-For every new request after plan creation, decide first:
+For every new request after an active plan session exists, decide first:
 
 - `Decision: Continue Current Plan`
 - `Decision: Create New Plan`
@@ -71,6 +90,8 @@ For every new request after plan creation, decide first:
 Provide one short reason.
 
 Create a new plan when objective/success criteria change materially, a new subsystem is introduced, architecture shifts significantly, or planned updates would rewrite roughly more than 40% of the current plan.
+
+If there is no active plan session in the current conversation, do not apply this gate and create a new plan instead.
 
 ## task.md Template
 

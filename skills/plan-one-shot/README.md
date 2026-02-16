@@ -26,6 +26,8 @@ npx skills add ishk-sftckz/exspecso -y -a '*' --skill plan-one-shot
 - strict review gate before execution
 - explicit trigger phrase: `Execute Plan`
 - ordered execution with continuous task status updates
+- new conversations start as new plan creation by default (no automatic resume from `.exspecso/`)
+- explicit resume behavior when user asks to continue an existing plan and references it
 
 ## How to use
 
