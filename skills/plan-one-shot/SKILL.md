@@ -32,18 +32,47 @@ Replicate Antigravity plan-mode behavior using three artifacts and strict review
 - Prefer adapting existing modules over creating new ones.
 - Keep tool/process notes out of main workstream bullets unless they directly affect implementation steps.
 
+## Change Block Rules
+
+Every file block must answer: **what changes, where, and why.** Nothing more.
+
+1. **One block per logical change** - Group files that move/modify together.
+2. **Folder-level when 3+ files** - Use folder path, list files inside.
+3. **File-level only when unique logic** - If a file needs different treatment, separate it.
+4. **Implicit imports** - Don't list every import update; state once at group level.
+5. **One bullet = one action** - No compound sentences.
+
+Good:
+```markdown
+#### [MOVE] [_features/resume/](file:///abs/path/resume/)
+- From `insights/`: agents/resume-parser.ts, utils/resume.ts, service.ts
+- Import paths update to `@/_features/resume`
+```
+
+Bad:
+```markdown
+#### [CREATE] [_features/resume/agents/resume-parser.ts]
+- Move resume parser agent from insights/agents/resume-parser.ts
+- Update import from @/_features/ai/models
+
+#### [CREATE] [_features/resume/utils/resume.ts]
+- Move extractText and validateFileSize from insights/utils/resume.ts
+```
+
 ## Required Plan Structure
 
 `implementation_plan.md` must follow this order:
 
 1. Title
-2. One-line objective
-3. `## Proposed Changes`
+2. Objective - clear and concise, scaled to scope
+3. Proposed Changes
 4. Workstreams
 5. File blocks using this format:
    - `#### [MODIFY] [path/to/file.ts](file:///absolute/path/to/file.ts)`
    - `#### [CREATE] [path/to/new-file.ts](file:///absolute/path/to/new-file.ts)`
-6. `## Verification Plan`
+   - `#### [MOVE] [path/to/dest-folder/](file:///absolute/path/to/dest-folder/)` for reorgs (list files inside)
+   - `#### [DELETE] [path/to/old-folder/](file:///absolute/path/to/old-folder/)` for removals
+6. Verification Plan
 
 Use `---` between major workstreams.
 
