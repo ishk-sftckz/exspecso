@@ -1,48 +1,51 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="card" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF7EE"/>
-      <stop offset="1" stop-color="#F2E4D1"/>
-    </linearGradient>
-    <linearGradient id="coffee" x1="140" y1="156" x2="380" y2="372" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5F3A23"/>
-      <stop offset="1" stop-color="#2F1E14"/>
-    </linearGradient>
-    <linearGradient id="agent" x1="256" y1="82" x2="256" y2="224" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#24B8A8"/>
-      <stop offset="1" stop-color="#167D74"/>
-    </linearGradient>
-  </defs>
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep Espresso Background -->
+  <rect width="600" height="200" rx="32" fill="#1E1511"/>
 
-  <rect x="28" y="28" width="456" height="456" rx="104" fill="url(#card)"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:ital,wght@1,900&amp;display=swap');
 
-  <ellipse cx="256" cy="154" rx="132" ry="44" fill="#7A5439"/>
-  <ellipse cx="256" cy="150" rx="116" ry="30" fill="#2F1E14"/>
+    .logotype {
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 116px;
+      letter-spacing: -6px;
+    }
 
-  <path d="M140 156H372V284C372 345.856 321.856 396 260 396H252C190.144 396 140 345.856 140 284V156Z" fill="url(#coffee)"/>
+    /* Caramel Crema for the execution highlight running through the middle */
+    .highlight { fill: #D5A770; }
+    /* Latte Foam for the base text */
+    .base { fill: #F4EEDD; }
+  </style>
 
-  <path d="M366 212H392C423.48 212 449 237.52 449 269C449 300.48 423.48 326 392 326H366" stroke="#2F1E14" stroke-width="18" stroke-linecap="round"/>
+  <!-- Architectural Background Grids (Mocha Line) -->
+  <g stroke="#8C5A35" stroke-opacity="0.25" stroke-width="2">
+    <path d="M 0 40 L 600 40 M 0 160 L 600 160"/>
+    <path d="M 80 0 L 80 200 M 520 0 L 520 200"/>
+    <path d="M 75 100 L 85 100 M 515 100 L 525 100"/>
+    <path d="M 300 35 L 300 45 M 300 155 L 300 165"/>
+  </g>
 
-  <rect x="178" y="412" width="156" height="18" rx="9" fill="#2F1E14" opacity="0.88"/>
+  <!-- Central Integrated Logotype -->
+  <!-- "exspecso" written completely continuously, no spaces, using color as the separator -->
+  <g transform="translate(300, 140)">
+    <text x="0" y="0" class="logotype" text-anchor="middle">
+      <tspan class="base">ex</tspan><tspan class="highlight">spec</tspan><tspan class="base">so</tspan>
+    </text>
+  </g>
 
-  <path d="M206 126C206 107.2 220 97.8 220 82" stroke="url(#agent)" stroke-width="10" stroke-linecap="round"/>
-  <path d="M256 126C256 107.2 270 97.8 270 82" stroke="url(#agent)" stroke-width="10" stroke-linecap="round"/>
-  <path d="M306 126C306 107.2 320 97.8 320 82" stroke="url(#agent)" stroke-width="10" stroke-linecap="round"/>
+  <!-- Spec / Blueprint Drafting Nodes & Brackets framing the word -->
+  <g stroke="#8C5A35" stroke-width="6" fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Top left bracket over "e" -->
+    <path d="M 230 40 L 120 40 L 120 70" />
 
-  <circle cx="220" cy="76" r="8" fill="#24B8A8"/>
-  <circle cx="270" cy="76" r="8" fill="#24B8A8"/>
-  <circle cx="320" cy="76" r="8" fill="#24B8A8"/>
+    <!-- Bottom right bracket under "o" -->
+    <path d="M 370 160 L 485 160 L 485 130" />
+  </g>
 
-  <path d="M220 68V54H198" stroke="#24B8A8" stroke-width="6" stroke-linecap="round"/>
-  <path d="M270 68V48H292" stroke="#24B8A8" stroke-width="6" stroke-linecap="round"/>
-  <path d="M320 68V54H342" stroke="#24B8A8" stroke-width="6" stroke-linecap="round"/>
+  <!-- Execution Node Drops (Energy dots) -->
+  <circle cx="120" cy="40" r="5" fill="#D5A770" />
+  <circle cx="485" cy="160" r="5" fill="#D5A770" />
 
-  <circle cx="192" cy="54" r="4.5" fill="#167D74"/>
-  <circle cx="298" cy="48" r="4.5" fill="#167D74"/>
-  <circle cx="348" cy="54" r="4.5" fill="#167D74"/>
-
-  <circle cx="118" cy="248" r="7" fill="#24B8A8"/>
-  <circle cx="394" cy="110" r="7" fill="#24B8A8"/>
-  <path d="M125 248H146" stroke="#24B8A8" stroke-width="5" stroke-linecap="round"/>
-  <path d="M387 110H366" stroke="#24B8A8" stroke-width="5" stroke-linecap="round"/>
 </svg>
